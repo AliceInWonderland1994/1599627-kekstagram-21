@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url]
 
 * Студент: [Алиса Васяткина](https://up.htmlacademy.ru/javascript/21/user/1599627).
-* Наставник: `Неизвестно`.
+* Наставник: `Иван Кривонос`.
 
 ---
 
