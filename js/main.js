@@ -30,9 +30,9 @@ const pictureContainer = document.querySelector(`#picture`);
 
 const renderPicture = function (picture) {
   const pictureElement = pictureContainer.cloneNode(true);
-  pictureElement.content.querySelector(`.picture`).querySelector(`.picture__img`).setAttribute(`src`, picture.url);
-  pictureElement.content.querySelector(`.picture__info`).querySelector(`.picture__likes`).textContent = picture.likes;
-  pictureElement.content.querySelector(`.picture__info`).querySelector(`.picture__comments`).textContent = picture.comments.length;
+  pictureElement.content.querySelector(`.picture .picture__img`).setAttribute(`src`, picture.url);
+  pictureElement.content.querySelector(`.picture__info .picture__likes`).textContent = picture.likes;
+  pictureElement.content.querySelector(`.picture__info .picture__comments`).textContent = picture.comments.length;
 
   return pictureElement;
 };
@@ -72,7 +72,7 @@ const getPictureCommentsArray = function () {
 const drawPictures = function () {
   const fragment = document.createDocumentFragment();
   const pictures = getPictureArray();
-  for (const i = 0; i < pictures.length; i++) {
+  for (let i = 0; i < pictures.length; i++) {
     fragment.appendChild(renderPicture(pictures[i]));
   }
   pictureContainer.appendChild(fragment);
